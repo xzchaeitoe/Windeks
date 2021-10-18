@@ -6,7 +6,7 @@
 function Show-Menu
 {
      param (
-           [string]$Title = 'Windeks v 1.3.3'
+           [string]$Title = 'Windeks v 1.4.0'
      )
      cls
      Write-Host "================ $Title ================"
