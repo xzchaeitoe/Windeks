@@ -75,9 +75,9 @@ do
                 
                     get-winevent -FilterHashTable @{logname=”Application”; id=”1001"}| ?{$_.providername –match "wininit”}
                     
-                    get-winevent -FilterHashTable @{logname='System'; id='1101'}| ?{$_.providername -match 'MemoryDiagnostics-Results'}
+                    get-winevent -FilterHashTable @{logname='System'; id='1101'}| ?{$_.providername -match "MemoryDiagnostics-Results"}
                     
-                    get-winevent -FilterHashTable @{logname='System'; id='1201'}| ?{$_.providername -match 'MemoryDiagnostics-Results'}
+                    get-winevent -FilterHashTable @{logname='System'; id='1201'}| ?{$_.providername -match "MemoryDiagnostics-Results"}
                     
            } 'q' {
                 return
