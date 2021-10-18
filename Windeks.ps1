@@ -14,7 +14,7 @@ function Show-Menu
      Write-Host "1: Press '1' to update, do system scan, and DISM."
      Write-Host "2: Press '2' to check the hard drive for errors and run memory diagnostics."
      Write-Host "3: Press '3' to run a performance check."
-     Write-Hose "4: Press '4' to view chkdsk and memtest logs."
+     Write-Host "4: Press '4' to view chkdsk and memtest logs."
      Write-Host "Q: Press 'Q' to quit."
 }
 do
@@ -72,6 +72,7 @@ do
            } '4' {
                 cls
                 #This will open the logs for chkdsk and memtest
+                
                     get-winevent -FilterHashTable @{logname=”Application”; id=”1001"}| ?{$_.providername –match "wininit”} | fl timecreated, message.
                     
                     get-winevent -FilterHashTable @{logname='System'; id='1101'}^|?{$_.providername -match 'MemoryDiagnostics-Results'}
