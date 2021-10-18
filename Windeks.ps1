@@ -1,5 +1,5 @@
 #This is a windows cleanup tool that can update windows, run a system scan, do dism, run memory diagnostics, check the hard drive for errors and run a performance check. Just select the option you want and hit "a" or "y" when it the prompt asks!
-#V 1.3.4
+#V 1.4.0
 
 
 
