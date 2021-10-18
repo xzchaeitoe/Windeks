@@ -73,7 +73,7 @@ do
                 cls
                 #This will open the logs for chkdsk and memtest
                 
-                    get-winevent -FilterHashTable @{logname=”Application”; id=”1001"}| ?{$_.providername –match "wininit”}
+                    get-winevent -FilterHashTable @{logname=”Application”; id=”1001"}| ?{$_.providername –match "wininit”} | fl timecreated, message
                     
                     get-winevent -FilterHashTable @{logname='System'; id='1101'}| ?{$_.providername -match 'MemoryDiagnostics-Results'}
                     
